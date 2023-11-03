@@ -16,4 +16,6 @@ fn main() {
             .num_args(0))
         .get_matches();
 
+    println!("{:?}", _matches);
+
 }
