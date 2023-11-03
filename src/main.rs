@@ -10,6 +10,10 @@ fn main() {
             .help("Input text")
             .required(true)
             .num_args(1..))
+        .arg(Arg::new("omit_newline")
+            .short('n')
+            .help("Do not print newline")
+            .num_args(0))
         .get_matches();
 
 }
