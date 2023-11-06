@@ -26,12 +26,10 @@ fn main() {
         .map(String::as_str)
         .collect();
 
-    let omit_newline:bool = *matches.get_one("omit_newline").unwrap();
+    let omit_newline: bool = *matches.get_one("omit_newline").unwrap();
 
-    let mut ending = "\n";
-    if omit_newline {
-        ending = " ";
-    }
+    let ending =if omit_newline {" "} else {"\n"};
+
 
     print!("{}{}", text.join(" "), ending);
 }
